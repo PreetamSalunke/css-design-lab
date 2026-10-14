@@ -1,11 +1,15 @@
 
 # CSS Design Lab
 
-A responsive CSS challenge project created as part of the
-**WeIntern Web Development Internship – Week 1, Task 3**.
+A responsive CSS challenge project created as part of the **WeIntern Web Development Internship – Week 1, Task 3**.
 
-This project demonstrates modern CSS layout techniques
-using Flexbox, CSS Grid, and CSS animations.
+This project demonstrates modern CSS layout techniques using Flexbox, CSS Grid, and CSS animations.
+
+## Live Demo
+
+🌐 **Live Website:** [CSS Design Lab](https://preetamsalunke.github.io/css-design-lab/)
+
+💻 **GitHub Repository:** [View Source Code](https://github.com/PreetamSalunke/css-design-lab)
 
 ## Features
 
@@ -20,7 +24,7 @@ using Flexbox, CSS Grid, and CSS animations.
 - Three columns on desktop
 - Two columns on tablets
 - One column on mobile devices
-- Built using CSS Grid and repeat()
+- Built using CSS Grid and `repeat()`
 
 ### 3. CSS Animations
 - Interactive button hover animation
