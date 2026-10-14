@@ -1,0 +1,132 @@
+
+/* =========================================
+   CHALLENGE 01 - RESPONSIVE FLEXBOX
+   ========================================= */
+
+/* =========================================
+   1. FLEXBOX CONTAINER
+   ========================================= */
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   2. FLEX CARDS
+   ========================================= */
+
+.flex-card {
+    flex: 1 1 280px;
+    min-width: 0;
+    max-width: 380px;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+
+    padding: 36px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* =========================================
+   3. HOVER EFFECT
+   ========================================= */
+
+.flex-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 18px 45px rgba(139, 92, 246, 0.15);
+}
+
+/* =========================================
+   4. CARD ICON
+   ========================================= */
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 16px;
+
+    font-size: 30px;
+    margin-bottom: 26px;
+}
+
+/* =========================================
+   5. CARD CONTENT
+   ========================================= */
+
+.flex-card h3 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.flex-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+}
+
+/* =========================================
+   6. CARD LABEL
+   ========================================= */
+
+.card-label {
+    display: inline-block;
+    margin-top: auto;
+
+    padding: 7px 14px;
+
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.18);
+    border-radius: 30px;
+
+    color: var(--accent-light);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =========================================
+   7. TABLET & MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .flex-card {
+        flex: 0 1 auto;
+        width: 100%;
+        max-width: none;
+        padding: 28px 24px;
+    }
+
+    .flex-card:hover {
+        transform: translateY(-5px);
+    }
+}

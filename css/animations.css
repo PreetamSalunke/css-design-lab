@@ -1,0 +1,277 @@
+
+/* =========================================
+   CHALLENGE 03 - CSS ANIMATIONS
+   ========================================= */
+
+/* =========================================
+   1. ANIMATION CONTAINER
+   ========================================= */
+
+.animation-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    align-items: stretch;
+}
+
+/* =========================================
+   2. ANIMATION CARDS
+   ========================================= */
+
+.animation-card {
+    min-width: 0;
+    padding: 26px;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.animation-card:hover {
+    border-color: rgba(139, 92, 246, 0.5);
+
+    box-shadow:
+        0 12px 35px rgba(139, 92, 246, 0.1);
+}
+
+/* =========================================
+   3. ANIMATION PREVIEW AREA
+   ========================================= */
+
+.animation-preview {
+    min-height: 210px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    margin-bottom: 26px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(139, 92, 246, 0.12),
+            transparent 75%
+        ),
+        #121b30;
+
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+}
+
+/* =========================================
+   4. ANIMATED BUTTON
+   ========================================= */
+
+.animated-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 15px 22px;
+
+    background: var(--gradient);
+    color: #10172b;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.animated-btn span {
+    font-size: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.animated-btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(139, 92, 246, 0.35);
+}
+
+.animated-btn:hover span {
+    transform: translateX(5px);
+}
+
+.animated-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* =========================================
+   5. LOADING SPINNER
+   ========================================= */
+
+.loading-spinner {
+    width: 75px;
+    height: 75px;
+
+    border: 6px solid rgba(139, 92, 246, 0.18);
+    border-top-color: var(--accent);
+    border-right-color: var(--accent-blue);
+
+    border-radius: 50%;
+
+    animation: spinner-rotate 1s linear infinite;
+}
+
+@keyframes spinner-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================
+   6. CARD LIFT ANIMATION
+   ========================================= */
+
+.lift-demo {
+    width: 155px;
+    min-height: 115px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #263451,
+        #35446b
+    );
+
+    border: 1px solid rgba(167, 139, 250, 0.35);
+    border-radius: 14px;
+
+    cursor: default;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.lift-demo span {
+    color: var(--accent-light);
+    font-size: 30px;
+
+    transition: transform 0.35s ease;
+}
+
+.lift-demo strong {
+    color: var(--text-white);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lift-demo:hover {
+    transform: translateY(-12px) scale(1.04);
+
+    border-color: var(--accent-light);
+
+    box-shadow:
+        0 20px 35px rgba(139, 92, 246, 0.25);
+}
+
+.lift-demo:hover span {
+    transform: rotate(20deg) scale(1.15);
+}
+
+/* =========================================
+   7. ANIMATION CARD TEXT
+   ========================================= */
+
+.animation-card h3 {
+    color: var(--text-white);
+
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-bottom: 14px;
+}
+
+.animation-card p {
+    color: var(--text-muted);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   8. TABLET RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 992px) {
+    .animation-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .animation-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* =========================================
+   9. MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 600px) {
+    .animation-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .animation-card {
+        padding: 20px;
+    }
+
+    .animation-card:last-child {
+        grid-column: auto;
+    }
+
+    .animation-preview {
+        min-height: 180px;
+    }
+}
+
+/* =========================================
+   10. REDUCED MOTION SUPPORT
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .loading-spinner {
+        animation: none;
+    }
+
+    .animated-btn,
+    .animated-btn span,
+    .lift-demo,
+    .lift-demo span {
+        transition: none;
+    }
+}

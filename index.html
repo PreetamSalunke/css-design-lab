@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="CSS Design Lab - A responsive showcase of Flexbox, CSS Grid and modern CSS animations.">
+
+    <title>CSS Design Lab | Flexbox, Grid & Animations</title>
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Challenge Styles -->
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ==================================
+         HEADER / NAVIGATION
+    ================================== -->
+    <header class="header">
+
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a href="#home" class="logo">
+                CSS <span>Design Lab</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#flexbox">Flexbox</a>
+                <a href="#grid">CSS Grid</a>
+                <a href="#animations">Animations</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- ==================================
+             HERO SECTION
+        ================================== -->
+        <section class="hero" id="home">
+
+            <div class="container hero-content">
+
+                <p class="section-tag">WEINTERN • WEEK 1 • TASK 3</p>
+
+                <h1>
+                    Exploring the Power of
+                    <span>Modern CSS</span>
+                </h1>
+
+                <p class="hero-description">
+                    A creative showcase of responsive layouts,
+                    flexible components, CSS Grid systems,
+                    and smooth animations built with pure CSS.
+                </p>
+
+                <a href="#flexbox" class="hero-btn">
+                    Explore Challenges
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- ==================================
+             CHALLENGE 1: FLEXBOX
+        ================================== -->
+        <section class="challenge-section flexbox-section" id="flexbox">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-tag">CHALLENGE 01</p>
+
+                    <h2>Responsive <span>Flexbox Layout</span></h2>
+
+                    <p class="section-description">
+                        Three feature cards arranged horizontally
+                        on desktop and vertically on mobile using
+                        CSS Flexbox.
+                    </p>
+
+                </div>
+
+                <div class="flex-container">
+
+                    <!-- Flex Card 1 -->
+                    <article class="flex-card">
+
+                        <div class="card-icon" aria-hidden="true">
+                            &#128187;
+                        </div>
+
+                        <h3>Web Development</h3>
+
+                        <p>
+                            Build modern, responsive websites
+                            using clean HTML, CSS, and
+                            JavaScript fundamentals.
+                        </p>
+
+                        <span class="card-label">HTML & CSS</span>
+
+                    </article>
+
+                    <!-- Flex Card 2 -->
+                    <article class="flex-card">
+
+                        <div class="card-icon" aria-hidden="true">
+                            &#127912;
+                        </div>
+
+                        <h3>UI / UX Design</h3>
+
+                        <p>
+                            Create visually engaging interfaces
+                            with thoughtful spacing, typography,
+                            and consistent visual elements.
+                        </p>
+
+                        <span class="card-label">Design Systems</span>
+
+                    </article>
+
+                    <!-- Flex Card 3 -->
+                    <article class="flex-card">
+
+                        <div class="card-icon" aria-hidden="true">
+                            &#128241;
+                        </div>
+
+                        <h3>Responsive Design</h3>
+
+                        <p>
+                            Deliver seamless browsing experiences
+                            across mobile, tablet, and desktop
+                            screen sizes.
+                        </p>
+
+                        <span class="card-label">Mobile First</span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==================================
+             CHALLENGE 2: CSS GRID
+        ================================== -->
+        <section class="challenge-section grid-section" id="grid">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-tag">CHALLENGE 02</p>
+
+                    <h2>Modern <span>CSS Grid Layout</span></h2>
+
+                    <p class="section-description">
+                        A responsive dashboard-style grid
+                        featuring six components arranged
+                        using CSS Grid.
+                    </p>
+
+                </div>
+
+                <div class="grid-container">
+
+                    <!-- Grid Card 1 -->
+                    <article class="grid-card">
+
+                        <div class="grid-icon" aria-hidden="true">
+                            &#9889;
+                        </div>
+
+                        <h3>Performance</h3>
+
+                        <p>Fast and efficient layouts.</p>
+
+                        <span class="grid-tag">Speed</span>
+
+                    </article>
+
+                    <!-- Grid Card 2 -->
+                    <article class="grid-card">
+
+                        <div class="grid-icon" aria-hidden="true">
+                            &#128736;
+                        </div>
+
+                        <h3>Customization</h3>
+
+                        <p>Flexible and reusable components.</p>
+
+                        <span class="grid-tag">Flexible</span>
+
+                    </article>
+
+                    <!-- Grid Card 3 -->
+                    <article class="grid-card">
+
+                        <div class="grid-icon" aria-hidden="true">
+                            &#128200;
+                        </div>
+
+                        <h3>Scalability</h3>
+
+                        <p>Layouts that grow with your project.</p>
+
+                        <span class="grid-tag">Growth</span>
+
+                    </article>
+
+                    <!-- Grid Card 4 -->
+                    <article class="grid-card">
+
+                        <div class="grid-icon" aria-hidden="true">
+                            &#127760;
+                        </div>
+
+                        <h3>Accessibility</h3>
+
+                        <p>Interfaces designed for everyone.</p>
+
+                        <span class="grid-tag">Inclusive</span>
+
+                    </article>
+
+                    <!-- Grid Card 5 -->
+                    <article class="grid-card">
+
+                        <div class="grid-icon" aria-hidden="true">
+                            &#128274;
+                        </div>
+
+                        <h3>Reliability</h3>
+
+                        <p>Consistent and predictable design.</p>
+
+                        <span class="grid-tag">Stable</span>
+
+                    </article>
+
+                    <!-- Grid Card 6 -->
+                    <article class="grid-card">
+
+                        <div class="grid-icon" aria-hidden="true">
+                            &#10024;
+                        </div>
+
+                        <h3>Creativity</h3>
+
+                        <p>Modern interfaces with unique details.</p>
+
+                        <span class="grid-tag">Innovative</span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==================================
+             CHALLENGE 3: CSS ANIMATIONS
+        ================================== -->
+        <section class="challenge-section animation-section" id="animations">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-tag">CHALLENGE 03</p>
+
+                    <h2>Creative <span>CSS Animations</span></h2>
+
+                    <p class="section-description">
+                        Smooth and interactive animations
+                        created using CSS transitions,
+                        transforms, and keyframes.
+                    </p>
+
+                </div>
+
+                <div class="animation-container">
+
+                    <!-- Animation 1: Button -->
+                    <article class="animation-card">
+
+                        <div class="animation-preview">
+
+                            <button type="button" class="animated-btn">
+                                Hover Over Me
+                                <span aria-hidden="true">→</span>
+                            </button>
+
+                        </div>
+
+                        <h3>Button Hover Effect</h3>
+
+                        <p>
+                            A smooth interactive button
+                            animation using transitions
+                            and transforms.
+                        </p>
+
+                    </article>
+
+                    <!-- Animation 2: Spinner -->
+                    <article class="animation-card">
+
+                        <div class="animation-preview">
+
+                            <div class="loading-spinner"
+                                role="img"
+                                aria-label="Decorative loading spinner demonstration">
+                            </div>
+
+                        </div>
+
+                        <h3>Loading Spinner</h3>
+
+                        <p>
+                            A continuously rotating loader
+                            created using CSS keyframes.
+                        </p>
+
+                    </article>
+
+                    <!-- Animation 3: Card Lift -->
+                    <article class="animation-card">
+
+                        <div class="animation-preview">
+
+                            <div class="lift-demo">
+                                <span aria-hidden="true">✦</span>
+                                <strong>Hover Me</strong>
+                            </div>
+
+                        </div>
+
+                        <h3>Card Lift Animation</h3>
+
+                        <p>
+                            A subtle elevation effect
+                            using transform and
+                            box-shadow transitions.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ==================================
+         FOOTER
+    ================================== -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <p>
+                &copy; 2026 CSS Design Lab.
+                Built with HTML5 & CSS3.
+            </p>
+
+            <p>
+                Designed by Preetam Salunke
+                | WeIntern Week 1 - Task 3
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
